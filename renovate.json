@@ -4,8 +4,8 @@
     "config:base"
   ],
   "swift": {
-    "fileMatch": [
-      "^foo/Package.swift$"
+    "ignorePaths": [
+      "foo/Package.swift"
     ]
   }
 }
