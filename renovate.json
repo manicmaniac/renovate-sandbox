@@ -3,9 +3,34 @@
   "extends": [
     "config:base"
   ],
-  "swift": {
-    "ignorePaths": [
-      "foo/Package.swift"
-    ]
-  }
+  "packageRules": [
+    {
+      "matchPaths": ["auto/**"],
+      "rangeStrategy": "auto"
+    },
+    {
+      "matchPaths": ["bump/**"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchPaths": ["in-range-only/**"],
+      "rangeStrategy": "in-range-only"
+    },
+    {
+      "matchPaths": ["pin/**"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "matchPaths": ["replace/**"],
+      "rangeStrategy": "replace"
+    },
+    {
+      "matchPaths": ["update-lockfile/**"],
+      "rangeStrategy": "update-lockfile"
+    },
+    {
+      "matchPaths": ["widen/**"],
+      "rangeStrategy": "widen"
+    }
+  ]
 }
