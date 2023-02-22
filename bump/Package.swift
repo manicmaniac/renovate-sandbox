@@ -3,18 +3,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "bar",
+    name: "foo",
     products: [
         .library(
-            name: "bar",
-            targets: ["bar"]),
+            name: "foo",
+            targets: ["foo"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.2.0"),
+        .package(url: "https://github.com/apple/swift-argument-parser", exact: "1.2.0"),
     ],
     targets: [
         .target(
-            name: "bar",
+            name: "foo",
             dependencies: []),
     ]
 )
